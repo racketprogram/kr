@@ -5,8 +5,8 @@
 
 int main(void)
 {
-	char a[] = "237646234";
-	qsort(a, 0, 8);	
+	char *a = "237646234";
+	qsort(&a, 0, 5);	
 	printf("%s\n", a);
 	return 0;
 }
