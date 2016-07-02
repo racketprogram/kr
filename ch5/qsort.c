@@ -1,4 +1,5 @@
 #include "qsort.h"
+#include "strcmp.h"
 
 void swap(char *v[], int i, int j)
 {
@@ -20,7 +21,7 @@ void qsort(char *v[], int left, int right)
 	last = left;
 
 	for (i = left + 1; i <= right; i++) {
-		if (v[i] < v[left]) {
+		if (strcmp(v[left], v[i]) > 0) {
 			swap(v, ++last, i);
 		}
 	}
