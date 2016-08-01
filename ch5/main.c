@@ -35,7 +35,7 @@ int readlines(char *lineptr[], int maxlines)
 void writelines(char *lineptr[], int nlines)
 {
 	int i;
-	
+
 	for (i = 0; i < nlines; i++) {
 		printf("%s\n", lineptr[i]);
 	}
@@ -44,8 +44,8 @@ void writelines(char *lineptr[], int nlines)
 int main(void)
 {
 	int nlines;
-	
-	if ((nlines = readlines(lineptr, MAXLINES)) >= 0) {
+
+  if ((nlines = readlines(lineptr, MAXLINES)) >= 0) {
 		qsort(lineptr, 0, nlines - 1);
 		writelines(lineptr, nlines);
 		return 0;
